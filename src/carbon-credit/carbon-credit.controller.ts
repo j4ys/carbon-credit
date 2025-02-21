@@ -26,6 +26,7 @@ export class CarbonCreditController {
     const credits =
       this.dynamicService.calculateCarbonCredits(investmentAmount);
     const roi = this.dynamicService.calculateROI(credits, investmentAmount);
+
     return res.status(HttpStatus.OK).json({
       carbonCreditsGenerated: credits,
       estimatedROI: roi,
